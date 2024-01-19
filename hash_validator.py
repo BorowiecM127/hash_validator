@@ -25,7 +25,10 @@ def main():
 
     calculated_hash = calculate_sha256(args.file_path)
 
-    if calculated_hash == args.hash_string:
+    print(f"calculated hash: {calculated_hash.lower()}")
+    print(f"    hash_string: {args.hash_string.lower()}")
+
+    if calculated_hash.lower() == args.hash_string.lower():
         print("Hashes are equal!")
     else:
         print("Hashes are not equal!")
