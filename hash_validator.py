@@ -1,9 +1,10 @@
 """Script validating file SHA-256 hash with hash string"""
+
 import hashlib
 import argparse
 
 
-def calculate_sha256(file_path):
+def calculate_sha256(file_path: str) -> str:
     """Calculates the SHA-256 hash of a file."""
     sha256_hash = hashlib.sha256()
     with open(file_path, "rb") as file:
